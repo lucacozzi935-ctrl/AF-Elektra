@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { ShieldCheck, Mail, Phone, MapPin, Building2 } from 'lucide-react';
+import { ShieldCheck, Mail, Phone, MapPin, Building2, AlertCircle } from 'lucide-react';
 
 export default function Privacy() {
   return (
@@ -24,6 +24,16 @@ export default function Privacy() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm border border-black/5 space-y-10 text-gray-dark leading-relaxed">
 
+            {/* Nota validazione legale */}
+            <div className="flex items-start gap-3 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm">
+              <AlertCircle size={20} className="flex-shrink-0 mt-0.5 text-amber-700" />
+              <div>
+                <p className="font-medium">Avvertenza di trasparenza:</p>
+                <p className="text-amber-800 text-xs mt-1">
+                  Questo documento descrive la gestione dei dati personali del presente sito vetrina privo di strumenti di profilazione o tracciamento commerciale. Testo da far validare al legale o consulente privacy del Titolare.
+                </p>
+              </div>
+            </div>
             {/* 1. Titolare del Trattamento */}
             <section className="space-y-4">
               <div className="flex items-center gap-2">
