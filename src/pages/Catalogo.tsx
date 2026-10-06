@@ -64,17 +64,6 @@ const products: Product[] = [
     specs: ['8 canali SPDT', '24VDC', '10A@250VAC'],
   },
   {
-    id: '4',
-    name: 'Alimentatore Lineare Aperto',
-    code: 'PWR-LIN-12V-1A',
-    category: 'Alimentatori',
-    voltage: '230 VAC',
-    mounting: 'Aperto',
-    available: true,
-    image: '/images/alimentatore-lineare.jpg',
-    specs: ['230 VAC in', '12VDC 1A', '<2mV ripple'],
-  },
-  {
     id: '5',
     name: 'Relè Statico Trifase',
     code: 'RLY-ST-3PH-25A',
@@ -224,11 +213,10 @@ export default function Catalogo() {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`block w-full text-left text-sm px-3 py-2 rounded-lg transition-colors duration-300 ${
-                selectedCategory === cat
-                  ? 'bg-elektra-accent text-white font-medium'
-                  : 'text-gray-medium hover:bg-gray-light hover:text-black'
-              }`}
+              className={`block w-full text-left text-sm px-3 py-2 rounded-lg transition-colors duration-300 ${selectedCategory === cat
+                ? 'bg-elektra-accent text-white font-medium'
+                : 'text-gray-medium hover:bg-gray-light hover:text-black'
+                }`}
             >
               {cat}
             </button>
@@ -244,11 +232,10 @@ export default function Catalogo() {
             <button
               key={v}
               onClick={() => setSelectedVoltage(v)}
-              className={`block w-full text-left text-sm px-3 py-2 rounded-lg transition-colors duration-300 ${
-                selectedVoltage === v
-                  ? 'bg-elektra-accent text-white font-medium'
-                  : 'text-gray-medium hover:bg-gray-light hover:text-black'
-              }`}
+              className={`block w-full text-left text-sm px-3 py-2 rounded-lg transition-colors duration-300 ${selectedVoltage === v
+                ? 'bg-elektra-accent text-white font-medium'
+                : 'text-gray-medium hover:bg-gray-light hover:text-black'
+                }`}
             >
               {v}
             </button>
@@ -264,11 +251,10 @@ export default function Catalogo() {
             <button
               key={m}
               onClick={() => setSelectedMounting(m)}
-              className={`block w-full text-left text-sm px-3 py-2 rounded-lg transition-colors duration-300 ${
-                selectedMounting === m
-                  ? 'bg-elektra-accent text-white font-medium'
-                  : 'text-gray-medium hover:bg-gray-light hover:text-black'
-              }`}
+              className={`block w-full text-left text-sm px-3 py-2 rounded-lg transition-colors duration-300 ${selectedMounting === m
+                ? 'bg-elektra-accent text-white font-medium'
+                : 'text-gray-medium hover:bg-gray-light hover:text-black'
+                }`}
             >
               {m}
             </button>
@@ -280,15 +266,13 @@ export default function Catalogo() {
       <div>
         <label className="flex items-center gap-3 cursor-pointer group">
           <div
-            className={`w-10 h-6 rounded-full transition-colors duration-300 flex items-center ${
-              onlyAvailable ? 'bg-elektra-accent' : 'bg-gray-medium/30'
-            }`}
+            className={`w-10 h-6 rounded-full transition-colors duration-300 flex items-center ${onlyAvailable ? 'bg-elektra-accent' : 'bg-gray-medium/30'
+              }`}
             onClick={() => setOnlyAvailable(!onlyAvailable)}
           >
             <div
-              className={`w-5 h-5 rounded-full bg-white shadow-sm transition-transform duration-300 ${
-                onlyAvailable ? 'translate-x-5' : 'translate-x-0.5'
-              }`}
+              className={`w-5 h-5 rounded-full bg-white shadow-sm transition-transform duration-300 ${onlyAvailable ? 'translate-x-5' : 'translate-x-0.5'
+                }`}
             />
           </div>
           <span className="text-sm text-gray-medium group-hover:text-black transition-colors duration-300">
